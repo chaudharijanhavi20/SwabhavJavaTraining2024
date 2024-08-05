@@ -1,0 +1,5 @@
+package Composite.Model;
+
+public class Leaf {
+
+}

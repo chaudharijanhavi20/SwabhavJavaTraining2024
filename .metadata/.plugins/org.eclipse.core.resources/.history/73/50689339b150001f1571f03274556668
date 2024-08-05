@@ -1,0 +1,16 @@
+package Observer.Test;
+
+import Observer.Model.Account;
+import Observer.Model.EmailNotifier;
+import Observer.Model.InsufficientFundsException;
+import Observer.Model.SMSNotifier;
+
+public class AccountTest {
+	public static void main(String[] args) throws InsufficientFundsException {
+        Account account = new Account(123,"Janhavi",2000);
+        account.deposit(200);
+        account.withdraw(300);
+       
+        
+    }
+}

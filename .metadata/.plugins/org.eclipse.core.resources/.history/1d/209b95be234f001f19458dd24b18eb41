@@ -1,0 +1,12 @@
+package FactoryModel;
+
+public class AccountFactory {
+	public IAccount accountType(String AccountType) {
+		IAccount account = null;
+		if (AccountType == "Savings")
+			account =new Savings();
+		if (AccountType == "Current")
+			account = new Current();
+		return account;
+	}
+}

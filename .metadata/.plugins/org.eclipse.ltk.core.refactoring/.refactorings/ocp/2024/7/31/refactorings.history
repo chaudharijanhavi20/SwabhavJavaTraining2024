@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ocp.Solution.Model.diwali&apos; to &apos;DiwaliInterest&apos;&#x0D;&#x0A;- Original project: &apos;ocp&apos;&#x0D;&#x0A;- Original element: &apos;ocp.Solution.Model.diwali&apos;&#x0D;&#x0A;- Renamed element: &apos;ocp.Solution.Model.DiwaliInterest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;diwali&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ocp.Solution.Model{diwali.java[diwali" matchStrategy="1" name="DiwaliInterest" qualified="false" references="true" similarDeclarations="false" stamp="1722330871394" textual="false" version="1.0"/>
+</session>

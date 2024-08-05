@@ -1,0 +1,5 @@
+package Builder.Model;
+
+public class UserModel {
+
+}

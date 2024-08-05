@@ -1,0 +1,10 @@
+package Decorator.Model;
+
+public class ClassInspection implements ICarService{
+
+	@Override
+	public double getCost() {
+		return 1000;
+	}
+
+}

@@ -1,0 +1,17 @@
+package Adapter.Test;
+
+import Adapter.Model.Hat;
+import Adapter.Model.HatAdapter;
+import Adapter.Model.ShoppingCart;
+
+public class ShoppingTest {
+	public static void main(String[] args) {
+		Hat hat = new Hat("CAP", "Baseball Cap", 1000, 50.0);
+		HatAdapter hatAdapter = new HatAdapter(hat);
+		ShoppingCart cart = new ShoppingCart();
+		cart.addItem(hatAdapter);
+		double totalPrice = cart.getCartPrice();
+		System.out.println("Total price: " + totalPrice);
+	}
+
+}

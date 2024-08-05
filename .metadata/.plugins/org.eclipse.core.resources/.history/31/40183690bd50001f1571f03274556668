@@ -1,0 +1,27 @@
+package State.Model;
+
+public class packet {
+IPacketState state;
+
+public packet(IPacketState state) {
+	super();
+	this.state = state;
+}
+
+public IPacketState getState() {
+	return state;
+}
+
+public void setState(IPacketState state) {
+	this.state = state;
+}
+public void goToNextState() {
+	
+}
+public void goToPreviousState() {
+	
+}
+public void currentStatus() {
+	
+}
+}

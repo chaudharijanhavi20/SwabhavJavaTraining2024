@@ -1,0 +1,51 @@
+package Package;
+
+import java.util.Scanner;
+
+public class TicTacToe implements Game{
+	 private final Board board;
+	    private Player currentPlayer;
+
+	    public TicTacToe(int size) {
+	        currentPlayer = Player.X;
+	    }
+
+	    @Override
+	    public void play() {
+	        Scanner scanner = new Scanner(System.in);
+
+	        while (!isGameOver()) {
+	            board.display();
+	            System.out.print(currentPlayer.getSymbol() + "'s turn (row, column): ");
+	            try {
+	                int row = scanner.nextInt();
+	                int col = scanner.nextInt();
+	                board.placeMark(row, col, currentPlayer);
+	                if (board.hasWinner(currentPlayer)) {
+	                    System.out.println(currentPlayer + " wins!");
+	                    break;
+	                } else if (board.isFull()) {
+	                    System.out.println("It's a draw!");
+	                    break;
+	                }
+	                currentPlayer = currentPlayer == Player.X ? Player.O : Player.X;
+	            } catch (InputMismatchException e) {
+	                System.out.println("Invalid input. Please enter numbers for row and column.");
+	                scanner.nextLine();
+	            } catch (InvalidMoveException e) {
+	                System.out.println("Invalid move.");
+	            }
+	        }
+	    }
+
+	    private boolean isGameOver() {
+	        return board.hasWinner(playerX) || board.hasWinner(playerO) || board.isFull();
+	    }
+
+	    @Override
+	    public void reset() {
+	        board.reset();
+	        currentPlayer = Player.X;
+	    }
+	}
+}

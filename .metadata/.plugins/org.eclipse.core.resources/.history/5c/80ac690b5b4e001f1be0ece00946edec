@@ -1,0 +1,14 @@
+package worker.solution.Model;
+
+public class labour implements IWorkable {
+
+	public void start() {
+		System.out.println("Labour start working");
+
+	}
+
+	public void stop() {
+		System.out.println("Labour stop working ");
+	}
+
+}

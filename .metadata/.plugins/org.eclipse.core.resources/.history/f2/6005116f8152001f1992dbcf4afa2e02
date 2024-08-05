@@ -1,0 +1,10 @@
+package Package;
+
+public class SymbolO extends PlayingSymbols {
+
+	SymbolO(Symbol symbol) {
+		super(symbol.O);
+
+	}
+
+}

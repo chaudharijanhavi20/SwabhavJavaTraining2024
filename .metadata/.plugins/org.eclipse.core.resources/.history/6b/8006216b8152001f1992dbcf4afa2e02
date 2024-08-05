@@ -1,0 +1,9 @@
+package Package;
+
+public class PlayingSymbols {
+	public Symbol symbol;
+
+	PlayingSymbols(Symbol symbol) {
+		this.symbol = symbol;
+	}
+}

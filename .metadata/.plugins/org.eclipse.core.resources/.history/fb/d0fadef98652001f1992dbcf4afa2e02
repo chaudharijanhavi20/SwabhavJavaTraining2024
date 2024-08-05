@@ -1,0 +1,9 @@
+package Package;
+
+public interface Game {
+	void play();
+
+	void Borad();
+
+	boolean isGameOver();
+}

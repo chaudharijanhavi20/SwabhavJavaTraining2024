@@ -1,0 +1,10 @@
+package Test;
+
+import Package.TicTacToe;
+
+public class TicTacToeTest {
+public static void main(String[] args) {
+	TicTacToe tictactoe=new TicTacToe();
+	tictactoe.displayBoard();
+}
+}

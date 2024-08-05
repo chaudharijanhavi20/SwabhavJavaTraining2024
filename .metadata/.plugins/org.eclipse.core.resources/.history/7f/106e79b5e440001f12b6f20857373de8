@@ -1,0 +1,20 @@
+package ArraysQuestion;
+
+import java.util.Scanner;
+
+public class CheckTheNumber {
+public static void main(String[] args) {
+	int array[]= {20,45,67,89,30};
+	Scanner sc=new Scanner (System.in);
+	System.out.println("Enter the element you want to find :");
+	int search_element=sc.nextInt();
+	for(int i=0;i<array.length;i++) {
+		if(search_element==array[i]) {
+			System.out.println("Element is found");
+			break;
+		}else {
+			System.out.println("Not Found");
+		}
+	}
+}
+}

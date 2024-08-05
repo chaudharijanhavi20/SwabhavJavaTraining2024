@@ -1,0 +1,8 @@
+package ocp.Solution.Model;
+
+class DiwaliInterest implements IFestivalInterest {
+    @Override
+    public double calculateInterest() {
+        return 8.5;
+    }
+}

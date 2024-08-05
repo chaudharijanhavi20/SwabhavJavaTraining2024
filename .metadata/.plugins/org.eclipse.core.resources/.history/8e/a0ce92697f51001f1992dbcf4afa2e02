@@ -1,0 +1,14 @@
+package Package;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class OperationsTest {
+
+	@Test
+	public void testAddition() {
+		fail("Not yet implemented");
+	}
+
+}

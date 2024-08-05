@@ -1,0 +1,22 @@
+package Observer.Test;
+
+import java.util.Scanner;
+
+import Observer.Model.Account;
+import Observer.Model.EmailNotifier;
+import Observer.Model.InsufficientFundsException;
+import Observer.Model.SMSNotifier;
+
+public class AccountTest {
+	public static void main(String[] args) throws InsufficientFundsException {
+        Account account = new Account(123, "Janhavi", 1000);
+Scanner scanner=new Scanner(System.in);
+System.out.println("Which notification type do you want? ");
+
+        account.registerNotifier(new SMSNotifier());
+        account.registerNotifier(new EmailNotifier());
+        account.deposit(500);
+        account.withdraw(20000);
+
+    }
+}

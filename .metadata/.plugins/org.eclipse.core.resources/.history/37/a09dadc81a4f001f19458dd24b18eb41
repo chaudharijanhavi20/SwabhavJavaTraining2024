@@ -1,0 +1,10 @@
+package Creational.Design.Pattern.Singleton.Model;
+
+public class PracticeModel {
+	public void login() {
+		System.out.println("login created");
+	}
+	public void status() {
+		System.out.println("succesfull !!!!!!!!!");
+	}
+}

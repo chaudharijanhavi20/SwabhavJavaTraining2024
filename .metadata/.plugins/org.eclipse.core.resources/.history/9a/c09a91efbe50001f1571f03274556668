@@ -1,0 +1,20 @@
+package State.Model;
+
+public class Ordered implements IPacketState{
+
+	public void next(packet packets) {
+		 packet.setState(new Dispatched());
+		 }
+
+	public void current(packet packets) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void previous(packet packets) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

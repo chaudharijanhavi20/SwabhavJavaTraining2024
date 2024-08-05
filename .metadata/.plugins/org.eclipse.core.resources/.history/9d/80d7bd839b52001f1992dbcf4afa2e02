@@ -1,0 +1,11 @@
+package Test;
+
+import Package.IGame;
+import Package.TicTacToe;
+
+public class TicTacToeTest {
+	public static void main(String[] args) {
+		IGame game = new TicTacToe(3);
+		game.play();
+	}
+}

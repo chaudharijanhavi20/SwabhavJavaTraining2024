@@ -1,0 +1,7 @@
+package Adapter.Model;
+
+public interface IItems {
+	void getItemName();
+
+	void getItemPrice();
+}

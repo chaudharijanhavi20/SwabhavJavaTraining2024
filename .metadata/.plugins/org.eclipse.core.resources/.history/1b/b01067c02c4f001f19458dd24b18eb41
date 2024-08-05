@@ -1,0 +1,6 @@
+package AbstractFactory.Model;
+
+public class IAccount {
+void credit();
+void debit();
+}

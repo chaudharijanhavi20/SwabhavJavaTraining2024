@@ -1,0 +1,18 @@
+package Package;
+
+public class EmptyCell implements Cell {
+	public boolean isEmpty() {
+		return true;
+	}
+
+	@Override
+	public void setMark(Player player) {
+		// ... set mark logic
+	}
+
+	@Override
+	public Player getMark() {
+		return null;
+	}
+
+}

@@ -1,0 +1,24 @@
+package Package;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.mockito.Mockito;
+
+import Package.IStudentService;
+import Package.Student;
+
+public class StudentTest {
+	private IStudentService studentservice;
+	private Student student;
+
+	public void init() {
+		studentservice = Mockito.mock(IStudentService.class);
+	}
+
+	public void testcalculatepercentage() {
+		Mockito.when(studentservice.getTotalMarks()).thenReturn((double) 650);
+		Mockito.when(studentservice.getTotalSubjects()).thenReturn(10);
+
+		assertEquals(65, student.calculatePercentage());
+	}
+}

@@ -1,0 +1,5 @@
+package Decorator.Model;
+
+public class HatDecorator {
+
+}

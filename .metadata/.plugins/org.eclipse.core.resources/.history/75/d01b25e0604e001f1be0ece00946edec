@@ -1,0 +1,16 @@
+package Solution.Model;
+
+public class TaxModel {
+	private Dblogger dblogger;
+	private Filelogger filelogger;
+
+	public TaxModel(Dblogger dblogger, Filelogger filelogger) {
+		super();
+		this.dblogger = dblogger;
+		this.filelogger = filelogger;
+	}
+
+	public int calculateTax(int amount, int rate) {
+		return amount / rate;
+	}
+}

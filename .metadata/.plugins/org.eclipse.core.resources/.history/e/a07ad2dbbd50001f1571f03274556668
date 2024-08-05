@@ -1,0 +1,20 @@
+package State.Model;
+
+public class Delivered implements IPacketState {
+
+	public void next(packet packets) {
+		packet.setState(new Delivered());
+	}
+
+	@Override
+	public void current(packet packets) {
+		System.out.println("Packet is in Delivered state");
+
+	}
+
+	@Override
+	public void previous(packet packets) {
+		System.out.println("cannot move to previous state from Delivered state");
+	}
+
+}

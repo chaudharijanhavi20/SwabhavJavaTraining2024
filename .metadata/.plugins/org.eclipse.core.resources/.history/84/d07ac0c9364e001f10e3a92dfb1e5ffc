@@ -1,0 +1,16 @@
+package srp.solution.test;
+
+import srp.solution.model.InvoicePrinter;
+import srp.solution.model.TaxCalculator;
+import srp.solution.model.invoiceModel;
+
+public class InvoiceTest {
+public static void main(String[] args) {
+	invoiceModel invoice=new invoiceModel("first","mobile",40000,10);
+	
+	TaxCalculator taxCalculator = new TaxCalculator(invoice);
+
+    InvoicePrinter invoicePrinter = new InvoicePrinter(invoice, taxCalculator);
+System.out.println(invoicePrinter);
+}
+}

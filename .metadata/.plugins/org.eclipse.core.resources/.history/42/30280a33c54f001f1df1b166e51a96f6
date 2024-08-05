@@ -1,0 +1,120 @@
+package AbstractFactoryTest;
+
+import java.util.Scanner;
+
+import AbstractFactory.Model.IAccountFactory;
+import AbstractFactory.Model.BankAccountFactory;
+public class AccountTest {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        IAccountFactory factory = new BankAccountFactory();
+
+
+        Account currentAccount = null; // Store the currently selected account
+
+        while (true) {
+            displayMenu();
+
+            int choice = getChoice();
+
+            switch (choice) {
+                case 1:
+                    currentAccount = createSavingsAccount();
+                    break;
+                case 2:
+                    currentAccount = createCurrentAccount();
+                    break;
+                case 3:
+                    if (currentAccount != null) {
+                        performCreditOperation(currentAccount);
+                    } else {
+                        System.out.println("Please create an account first.");
+                    }
+                    break;
+                case 4:
+                    if (currentAccount != null) {
+                        performDebitOperation(currentAccount);
+                    } else {
+                        System.out.println("Please create an account first.");
+                    }
+                    break;
+                case 5:
+                    System.out.println("Exiting...");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Invalid choice");
+            }
+        }
+    }
+
+    private static void displayMenu() {
+        System.out.println("\nMenu:");
+        System.out.println("1. Create Savings Account");
+        System.out.println("2. Create Current Account");
+        System.out.println("3. Credit Operation");
+        System.out.println("4. Debit Operation");
+        System.out.println("5. Exit");
+        System.out.print("Enter your choice: ");
+    }
+
+    private static int getChoice() {
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // Consume newline character
+        return choice;
+    }
+
+    private static Account createSavingsAccount() {
+        System.out.print("Enter Account Number: ");
+        int accNo = scanner.nextInt();
+        scanner.nextLine(); // Consume newline character
+
+        System.out.print("Enter Account Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter Initial Balance: ");
+        double   
+ balance = scanner.nextDouble();   
+
+
+        return factory.createSavingsAccount(accNo, name, balance);
+    }
+
+    private static Account createCurrentAccount() {
+        System.out.print("Enter Account Number: ");
+        int accNo = scanner.nextInt();
+        scanner.nextLine(); // Consume newline character
+
+        System.out.print("Enter Account Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter Initial Balance: ");
+        double   
+ balance = scanner.nextDouble();
+
+        System.out.print("Enter Overdraft Limit: ");
+        double overdraft   
+ = scanner.nextDouble();
+
+        return factory.createCurrentAccount(accNo, name, balance, overdraft);
+    }
+
+    private static void performCreditOperation(Account account) {
+        System.out.print("Enter Amount to Credit: ");
+        double amount = scanner.nextDouble();
+
+        account.credit(amount);
+        System.out.println("Credited successfully!");
+    }
+
+    private static void performDebitOperation(Account account) {
+        System.out.print("Enter Amount to Debit: ");
+        double amount = scanner.nextDouble();
+
+        if (account.debit(amount)) {
+            System.out.println("Debited successfully!");
+        } else {
+            System.out.println("Insufficient balance or overdraft limit exceeded.");
+        }
+}

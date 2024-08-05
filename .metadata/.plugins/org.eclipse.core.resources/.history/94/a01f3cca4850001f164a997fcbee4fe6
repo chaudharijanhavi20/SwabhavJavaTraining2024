@@ -1,0 +1,19 @@
+package Composite.Model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Composite implements IComponents {
+	String name;
+	List<IComponents> components = new ArrayList<>();
+
+	public void addComponents(IComponents com) {
+		components.add(com);
+	}
+
+	@Override
+	public void showPrice() {
+
+	}
+
+}

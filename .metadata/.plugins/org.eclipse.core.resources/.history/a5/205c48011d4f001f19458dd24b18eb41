@@ -1,0 +1,8 @@
+package Creational.Design.Pattern.Singleton.Test;
+
+import Creational.Design.Pattern.Singleton.Model.PracticeModel;
+
+public class PracticeTest {
+PracticeModel test=new PracticeModel();
+test.login();
+}

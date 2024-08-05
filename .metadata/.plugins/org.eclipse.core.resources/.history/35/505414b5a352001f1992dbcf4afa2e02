@@ -1,0 +1,15 @@
+package Package;
+
+public enum Player {
+	X('x'), O('o'), NONE('-');
+
+	private final char symbol;
+
+	Player(char symbol) {
+		this.symbol = symbol;
+	}
+
+	public char getSymbol() {
+		return symbol;
+	}
+}

@@ -1,0 +1,24 @@
+package Decorator.Test;
+
+import Decorator.Model.GoldenHat;
+import Decorator.Model.PremiumHat;
+import Decorator.Model.RibonedHat;
+import Decorator.Model.StandardHat;
+
+public class HatTest {
+	public static void main(String[] args) {
+		StandardHat standardHat = new StandardHat();
+		PremiumHat premiumHat = new PremiumHat();
+
+		GoldenHat goldenStandardHat = new GoldenHat(standardHat);
+		GoldenHat goldenStandardHat1 = new GoldenHat(premiumHat);
+		RibonedHat ribbonedPremiumHat = new RibonedHat(premiumHat);
+		RibonedHat ribbonedPremiumHat1 = new RibonedHat(standardHat);
+		
+		
+		System.out.println(goldenStandardHat.getName() + ", Price: " + goldenStandardHat.getPrice() + ", Description: "
+				+ goldenStandardHat.getDescription());
+		System.out.println(ribbonedPremiumHat.getName() + ", Price: " + ribbonedPremiumHat.getPrice()
+				+ ", Description: " + ribbonedPremiumHat.getDescription());
+	}
+}

@@ -1,0 +1,24 @@
+package Decorator.Model;
+
+public class GoldenHat extends HatDecorator {
+
+	public GoldenHat(IHat hat) {
+		super(hat);
+	}
+
+@Override
+    public String getName() {
+        return   
+ hat.getName() + " (Golden)";
+    }
+
+	@Override
+	public double getPrice() {
+		return hat.getPrice() + 200; // Add a gold coating price
+	}
+
+	@Override
+	public String getDescription() {
+		return hat.getDescription() + " with golden finish";
+	}
+}

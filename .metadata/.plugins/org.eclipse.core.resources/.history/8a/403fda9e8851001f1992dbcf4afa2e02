@@ -1,0 +1,9 @@
+package Package;
+
+public class AreaCalculatorTest {
+	AreaClaculator calculator;
+
+public init() {
+	calculator=new AreaClaculator();
+}
+}

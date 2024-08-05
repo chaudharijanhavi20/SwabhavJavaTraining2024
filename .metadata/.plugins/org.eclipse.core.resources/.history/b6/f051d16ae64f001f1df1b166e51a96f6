@@ -1,0 +1,11 @@
+package Facade.Model;
+
+public class IndianHotel implements IHotel{
+
+	@Override
+	public IMenu getMenu() {
+		System.out.println("Indian Hotel");
+		return null;
+	}
+
+}

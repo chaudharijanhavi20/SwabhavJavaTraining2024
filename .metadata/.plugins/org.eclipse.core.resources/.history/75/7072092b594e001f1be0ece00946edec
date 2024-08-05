@@ -1,0 +1,28 @@
+package worker.violation.Model;
+
+public class labour implements IWorker{
+ public void startWork() {
+	 System.out.println("Lobour start working ");
+ }
+
+@Override
+public void stopWork() {
+	// TODO Auto-generated method stub
+	System.out.println("Lobour stop working ");
+	
+}
+
+@Override
+public void eat() {
+	// TODO Auto-generated method stub
+	System.out.println("Lobour eat ");
+	
+}
+
+@Override
+public void drink() {
+	// TODO Auto-generated method stub
+	System.out.println("Lobour drink ");
+	
+}
+}

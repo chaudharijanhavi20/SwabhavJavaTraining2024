@@ -1,0 +1,17 @@
+package Creational.Design.Pattern.Singleton.Model;
+
+public class PracticeModel {
+	private static PracticeModel PracticeModel;
+	private PracticeModel() {
+		System.out.println("login created");
+	}
+
+	public void status() {
+		System.out.println("succesfull !!!!!!!!!");
+	}
+	public static Login() {
+		if(Login==null)
+			Login=new Login();
+		return Login;
+	}
+}

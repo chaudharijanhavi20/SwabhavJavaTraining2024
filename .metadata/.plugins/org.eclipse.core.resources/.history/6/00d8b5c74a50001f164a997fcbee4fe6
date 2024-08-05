@@ -1,0 +1,22 @@
+package Composite.Test;
+
+import Composite.Model.Composite;
+import Composite.Model.IComponents;
+import Composite.Model.Leaf;
+
+public class CompositeTest {
+	public static void main(String[] args) {
+		IComponents hd = new Leaf(4000, "HDD");
+		IComponents monitor = new Leaf(5000, "MONITOR");
+		IComponents mouse = new Leaf(5000, "MOUSE");
+		IComponents ram = new Leaf(1000, "RAM");
+		IComponents cpu = new Leaf(6000, "CPU");
+
+		Composite cabinet = new Leaf(6000, "CABINET");
+		Composite mb = new Leaf(6000, "MB");
+		Composite ph = new Leaf(6000, "PH");
+
+		ph.addComponents(monitor);
+
+	}
+}

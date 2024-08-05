@@ -1,0 +1,24 @@
+package Sreaming;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+
+import StreamModels.Account;
+
+public class AccountTest {
+public static void main(String[] args) {
+	 List<Account> accounts = new ArrayList<>();
+	 
+	 accounts.add(new Account(12345, "Janhavi", 1000.00));
+     accounts.add(new Account(54321, "Sarthak", 500.00));
+     accounts.add(new Account(67890, "Vedika", 2000.00));
+     accounts.add(new Account(364839, "Deep", 10000.00));
+     
+     Optional<Account> minBalanceAccount = accounts.stream()
+             .min(Comparator.comparingDouble(Account::getBalance));
+
+
+}
+}

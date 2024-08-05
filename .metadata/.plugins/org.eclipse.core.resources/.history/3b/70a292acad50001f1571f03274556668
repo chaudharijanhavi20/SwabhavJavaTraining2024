@@ -1,0 +1,10 @@
+package Observer.Model;
+
+public class EmailNotifier implements INotifier{
+
+	@Override
+	public void notify(Account account) {
+        System.out.println("Sending email notification to " + account.getName());
+    }
+
+}

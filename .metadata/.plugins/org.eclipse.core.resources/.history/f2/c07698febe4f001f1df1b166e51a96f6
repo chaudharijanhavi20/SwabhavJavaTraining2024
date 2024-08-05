@@ -1,0 +1,18 @@
+package FactoryModel;
+
+public class AccountFactory {
+	public IAccount getSavings(String name,int accountNumber) {
+		IAccount saving = null;
+		if (getSavings == "Savings")
+			saving = (IAccount) new Savings();
+		
+		return saving;
+		
+		public IAccount getCurrent(String name1,int accountNumber1,double minibalance) {
+		
+			IAccount current==null;
+			if(getCurrent=="current")
+				current=
+		}
+	}
+}

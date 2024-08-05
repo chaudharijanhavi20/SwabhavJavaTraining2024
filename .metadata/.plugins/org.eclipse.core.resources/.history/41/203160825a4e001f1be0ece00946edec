@@ -1,0 +1,5 @@
+package worker.solution.Model;
+
+public interface IWorkable {
+
+}

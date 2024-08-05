@@ -1,0 +1,11 @@
+package FactoryModel;
+
+public class MahindraFactor implements ICarFactory {
+
+	@Override
+	public void makeCar() {
+		ICars car = new ICars();
+		return car;
+	}
+
+}

@@ -1,0 +1,19 @@
+package Package;
+
+public enum Player {
+	X, O;
+
+	private final char symbol;
+
+	Player(char symbol) {
+		this.symbol = symbol;
+	}
+
+	public char getSymbol() {
+		return symbol;
+	}
+
+	public Player getOpponent() {
+		return (this == X) ? O : X;
+	}
+}

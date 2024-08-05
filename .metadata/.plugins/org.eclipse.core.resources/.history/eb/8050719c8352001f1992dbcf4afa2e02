@@ -1,0 +1,26 @@
+package Package;
+
+public class OccupiedCell implements Cell {
+	private final Player player;
+
+    public OccupiedCell(Player player) {
+        this.player = player;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public void setMark(Player player) {
+        // Cannot set mark on an occupied cell
+        throw new InvalidMoveException();
+    }
+
+    @Override
+    public Player getMark() {
+        return player;
+    }
+}
+}

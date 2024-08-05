@@ -1,0 +1,11 @@
+package srp.solution.test;
+
+import srp.solution.model.InvoicePrinter;
+import srp.solution.model.invoiceModel;
+
+public class InvoiceTest {
+public static void main(String[] args) {
+	invoiceModel invoice=new invoiceModel("first","mobile",40000,10);
+	
+}
+}

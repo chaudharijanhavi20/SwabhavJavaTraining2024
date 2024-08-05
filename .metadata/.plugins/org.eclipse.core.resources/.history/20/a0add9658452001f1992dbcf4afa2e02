@@ -1,0 +1,80 @@
+package Package;
+
+public class Board {
+	private final Cell[][] cells;
+	private final int size;
+
+	public Board(int size) {
+		this.size = size;
+		cells = new Cell[size][size];
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				cells[i][j] = new EmptyCell();
+			}
+		}
+	}
+
+	public boolean placeMark(int row, int col, Player player) {
+		if (row < 0 || row >= size || col < 0 || col >= size || !cells[row][col].isEmpty()) {
+			return false;
+		}
+		cells[row][col] = new OccupiedCell(player);
+		return true;
+	}
+
+	public boolean isWinner(Player player) {
+		char symbol = player == Player.X ? 'X' : 'O';
+		// Check rows
+		for (int i = 0; i < size; i++) {
+			if (cells[i][0].getMark() == currentPlayer.getSymbol()) &&
+			   cells[i][1].getMark() == currentPlayer.getSymbol() &&
+			   cells[i][2].getMark() == currentPlayer.getSymbol()) {
+			    return true;
+			}
+			}
+			
+		}
+
+	// Check columns
+	for(
+
+	int j = 0;j<size;j++)
+	{
+		if (cells[0][j].getMark() == symbol && cells[1][j].getMark() == symbol && cells[2][j].getMark() == symbol) {
+			return true;
+		}
+	}
+
+	// Check diagonals
+	if(cells[0][0].getMark()==symbol&&cells[1][1].getMark()==symbol&&cells[2][2].getMark()==symbol)
+	{
+		return true;
+	}if(cells[0][2].getMark()==symbol&&cells[1][1].getMark()==symbol&&cells[2][0].getMark()==symbol)
+	{
+		return true;
+	}
+
+	return false;
+	}
+
+	public boolean isFull() {
+		return cells.stream().flatMap(row -> Arrays.stream(row)).allMatch(cell -> !cell.isEmpty());
+	}
+
+	public void display() {
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				System.out.print(cells[i][j].getMark() + " ");
+			}
+			System.out.println();
+		}
+	}
+
+	public void reset() {
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				cells[i][j] = new EmptyCell();
+			}
+		}
+	}
+}

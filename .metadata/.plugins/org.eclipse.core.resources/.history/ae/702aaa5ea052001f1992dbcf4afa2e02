@@ -1,0 +1,86 @@
+package Package;
+
+import java.util.Scanner;
+
+public class TicTacToe implements IGame {
+	private char[][] board;
+	private char currentPlayer;
+
+	public TicTacToe() {
+		board = new char[3][3];
+		initializeBoard();
+		currentPlayer = 'x';
+	}
+
+	public void initializeBoard() {
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				board[i][j] = '-';
+			}
+		}
+	}
+
+	public void Board() {
+		System.out.println(" -------------");
+		for (int i = 0; i < board.length; i++) {
+			System.out.print(" | ");
+			for (int j = 0; j < board[i].length; j++) {
+				System.out.print(board[i][j] + " | ");
+			}
+			System.out.println();
+			System.out.println(" -------------");
+		}
+	}
+
+	@Override
+	public void play(int x, int y) {
+		try {
+			if (x < 0 || x >= board.length || y < 0 || y >= board[0].length) {
+				throw new IllegalArgumentException(
+						"Coordinates are out of bounds. Please enter values between 0 and 2.");
+			}
+			if (board[x][y] != '-') {
+				throw new IllegalStateException("Cell is already occupied. Choose another cell.");
+			}
+			board[x][y] = currentPlayer.getSymbol(); // Assign symbol to the board
+			currentPlayer = currentPlayer.getOpponent(); // Switch player
+		} catch (IllegalArgumentException | IllegalStateException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	@Override
+	public boolean isGameOver() {
+		return checkRows() || checkColumns() || checkDigonals();
+	}
+
+	private boolean checkRows() {
+		for (int i = 0; i < 3; i++) {
+			if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != '-') {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private boolean checkColumns() {
+
+		for (int i = 0; i < 3; i++) {
+			if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != '-') {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private boolean checkDigonals() {
+		if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != '-') {
+			return true;
+		}
+		if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != '-') {
+			return true;
+		}
+		return false;
+	}
+
+}

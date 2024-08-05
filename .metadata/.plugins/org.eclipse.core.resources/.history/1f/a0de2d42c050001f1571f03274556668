@@ -1,0 +1,5 @@
+package Strategy.Model;
+
+public class IOperations {
+void doOperation(int a,int b);
+}

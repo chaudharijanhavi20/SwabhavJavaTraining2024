@@ -1,0 +1,13 @@
+package violation.Model;
+
+public class TaxModel {
+	private DBlogger dblogger;
+
+	public TaxModel(DBlogger dblogger) {
+
+	}
+
+	public int calculateTax(int amount, int rate) {
+		return amount / rate;
+	}
+}

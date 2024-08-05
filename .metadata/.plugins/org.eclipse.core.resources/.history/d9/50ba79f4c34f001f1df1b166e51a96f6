@@ -1,0 +1,33 @@
+package AbstractFactoryTest;
+
+import java.util.Scanner;
+
+import AbstractFactory.Model.IAccountFactory;
+import AbstractFactory.Model.BankAccountFactory;
+public class AccountTest {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        IAccountFactory factory = new BankAccountFactory();
+
+        // ... (menu options and logic)
+
+        int choice = scanner.nextInt();
+        switch (choice) {
+            case 1:
+                // Create savings account
+                break;
+            case 2:
+                // Create current account
+                break;
+            case 3:
+                // Credit operation
+                break;
+            case 4:
+                // Debit operation
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
+    }
+}

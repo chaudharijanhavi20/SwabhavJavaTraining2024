@@ -1,0 +1,5 @@
+package srp.solution.model;
+
+public class InvoicePrinter {
+
+}

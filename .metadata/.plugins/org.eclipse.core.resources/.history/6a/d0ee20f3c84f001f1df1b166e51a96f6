@@ -1,0 +1,15 @@
+package Builder.Test;
+
+import Builder.Model.User;
+
+public class UserTest {
+	public static void main(String[] args) {
+		User user = new User.UserBuilder()
+				.withName("Janhavi")
+				.withEmail("janhavichaudhari8300@gmail.com")
+//				.withAddress("sector 3")
+				.build();
+		System.out.println(user);
+	}
+
+}

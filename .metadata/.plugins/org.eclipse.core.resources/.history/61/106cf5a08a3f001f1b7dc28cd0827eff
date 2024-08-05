@@ -1,0 +1,17 @@
+package H1;
+
+import java.util.Random;
+
+public class PigGame {
+
+	
+	public static void main(String args[]) {
+		int Noofturn =0;
+		int sum =0;
+		int rnd =  Random();
+		System.out.println(rnd);
+//		while(true) {
+//		}
+	}
+	
+}

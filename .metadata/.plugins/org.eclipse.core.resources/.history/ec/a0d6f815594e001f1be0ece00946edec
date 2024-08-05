@@ -1,0 +1,29 @@
+package worker.violation.Model;
+
+public class robot implements IWorker {
+
+	@Override
+	public void startWork() {
+		System.out.println("Robot start working ");
+
+	}
+
+	@Override
+	public void stopWork() {
+		System.out.println("Robot stop working ");
+
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("Robot eat ");
+
+	}
+
+	@Override
+	public void drink() {
+		System.out.println("Robot drink");
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package Facade.Model;
+
+public class IndianMenu implements IMenu {
+
+
+	public void displayMenu() {
+		System.out.println("veg");
+		System.out.println(" non - veg");
+	}
+
+}
